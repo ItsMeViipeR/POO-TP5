@@ -16,4 +16,11 @@ Point2D &Point2D::operator*=(double value) {
   return *this;
 }
 
+Point2D &Point2D::operator+=(double value) {
+  setX(getX() + value);
+  setY(getY() + value);
+
+  return *this;
+}
+
 Point2D::~Point2D() {}
