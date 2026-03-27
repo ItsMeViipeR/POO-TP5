@@ -7,7 +7,13 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 include_directories(include)
 
-set(SOURCES src/main.cpp src/Figure.cpp src/Point2D.cpp src/CptAppel.cpp)
+set(SOURCES
+	src/main.cpp
+	src/Figure.cpp
+	src/Point2D.cpp
+	src/CptAppel.cpp
+	src/Tableau6.cpp
+)
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
