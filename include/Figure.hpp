@@ -1,7 +1,14 @@
 #pragma once
 
+#include "Point2D.hpp"
+#include <vector>
 class Figure {
 public:
-    Figure();
-    ~Figure();
+  Figure();
+  ~Figure();
+
+  void ajouter(Point2D &p);
+
+private:
+  std::vector<Point2D> m_points;
 };
