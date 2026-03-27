@@ -1,5 +1,6 @@
 #include "Figure.hpp"
 #include "Point2D.hpp"
+#include <cmath>
 #include <iostream>
 
 Figure::Figure() {}
@@ -40,5 +41,21 @@ void Figure::dilater(double d) {
 void Figure::translater(double d) {
   for (auto &p : m_points) {
     p += d;
+  }
+}
+
+void Figure::tourner(double a) {
+#ifndef M_PI
+  auto rad = a * std::acos(-1) / 180;
+#else
+  auto rad = a * M_PI / 180;
+#endif
+
+  for (auto &p : m_points) {
+    auto oldX = p.getX();
+    auto oldY = p.getY();
+
+    p.setX(oldX * cos(rad) - oldY * sin(rad));
+    p.setY(oldX * sin(rad) + oldY * cos(rad));
   }
 }

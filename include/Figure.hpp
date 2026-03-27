@@ -17,6 +17,8 @@ public:
 
   void translater(double d);
 
+  void tourner(double a);
+
 private:
   std::vector<Point2D> m_points;
 };
