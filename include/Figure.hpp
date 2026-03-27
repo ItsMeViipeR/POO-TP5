@@ -11,6 +11,8 @@ public:
 
   void rotate();
 
+  void affiche() const;
+
 private:
   std::vector<Point2D> m_points;
 };

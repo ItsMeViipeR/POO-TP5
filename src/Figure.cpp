@@ -1,5 +1,6 @@
 #include "Figure.hpp"
 #include "Point2D.hpp"
+#include <iostream>
 
 Figure::Figure() {}
 
@@ -15,4 +16,17 @@ void Figure::rotate() {
     p.setX(oldY);
     p.setY(-oldX);
   }
+}
+
+void Figure::affiche() const {
+  std::cout << "[";
+
+  for (size_t i = 0; i < m_points.size(); ++i) {
+    if (i > 0)
+      std::cout << ", ";
+    std::cout << "Point2D(" << m_points[i].getX() << ", " << m_points[i].getY()
+              << ")";
+  }
+
+  std::cout << "]" << std::endl;
 }
