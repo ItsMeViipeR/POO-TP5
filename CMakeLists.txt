@@ -10,3 +10,15 @@ include_directories(include)
 set(SOURCES src/main.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCES})
+
+target_compile_options(${PROJECT_NAME}
+	PRIVATE
+		-Wall
+		-Wextra
+		-Wpedantic
+		-fsanitize=address
+)
+
+target_link_options(${PROJECT_NAME}
+	PRIVATE -fsanitize=address
+)
