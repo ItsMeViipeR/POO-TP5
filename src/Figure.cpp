@@ -30,3 +30,10 @@ void Figure::affiche() const {
 
   std::cout << "]" << std::endl;
 }
+
+void Figure::dilater(double d) {
+  for (auto &p : m_points) {
+    p.setX(p.getX() * d);
+    p.setY(p.getY() * d);
+  }
+}

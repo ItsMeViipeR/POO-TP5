@@ -13,6 +13,8 @@ public:
 
   void affiche() const;
 
+  void dilater(double d);
+
 private:
   std::vector<Point2D> m_points;
 };
