@@ -36,3 +36,9 @@ void Figure::dilater(double d) {
     p *= d;
   }
 }
+
+void Figure::translater(double d) {
+  for (auto &p : m_points) {
+    p += d;
+  }
+}

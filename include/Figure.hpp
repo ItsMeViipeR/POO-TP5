@@ -15,6 +15,8 @@ public:
 
   void dilater(double d);
 
+  void translater(double d);
+
 private:
   std::vector<Point2D> m_points;
 };
