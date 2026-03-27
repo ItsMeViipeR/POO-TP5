@@ -11,6 +11,8 @@ public:
   void setX(double x);
   void setY(double y);
 
+  Point2D &operator*=(double value);
+
 private:
   double m_x, m_y = 0.;
 };

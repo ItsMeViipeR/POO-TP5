@@ -33,7 +33,6 @@ void Figure::affiche() const {
 
 void Figure::dilater(double d) {
   for (auto &p : m_points) {
-    p.setX(p.getX() * d);
-    p.setY(p.getY() * d);
+    p *= d;
   }
 }

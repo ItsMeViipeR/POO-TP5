@@ -9,4 +9,11 @@ void Point2D::setX(double x) { m_x = x; }
 
 void Point2D::setY(double y) { m_y = y; }
 
+Point2D &Point2D::operator*=(double value) {
+  setX(getX() * value);
+  setY(getY() * value);
+
+  return *this;
+}
+
 Point2D::~Point2D() {}
